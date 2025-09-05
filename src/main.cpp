@@ -26,6 +26,7 @@ static std::vector<std::string> collect_txt_files(const std::string &dir)
         if (!p.is_regular_file())
             continue;
         auto path = p.path();
+
         if (path.extension() == ".txt")
             files.push_back(path.string());
     }
